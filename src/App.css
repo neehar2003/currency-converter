@@ -1,0 +1,271 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top left, #4f46e5 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #7c3aed 0%, transparent 35%),
+    #09090f;
+}
+
+.converter-card {
+  width: 100%;
+  max-width: 620px;
+  padding: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(18, 18, 28, 0.9);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.badge {
+  color: #a78bfa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 10px 0;
+  color: white;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+.converter-box {
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.amount-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.amount-symbol {
+  position: absolute;
+  left: 16px;
+  color: #a78bfa;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.amount-input input {
+  width: 100%;
+  padding: 16px 48px;
+  box-sizing: border-box;
+  border: 1px solid #353545;
+  border-radius: 12px;
+  outline: none;
+  background: #11111a;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.amount-input input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.clear-button {
+  position: absolute;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.currency-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: end;
+}
+
+.currency-field {
+  min-width: 0;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  position: absolute;
+  left: 12px;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+select {
+  width: 100%;
+  padding: 14px 10px 14px 44px;
+  border: 1px solid #353545;
+  border-radius: 12px;
+  outline: none;
+  background: #11111a;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #8b5cf6;
+}
+
+.swap-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #353545;
+  border-radius: 50%;
+  background: #181824;
+  color: #a78bfa;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.swap-button:hover {
+  transform: rotate(180deg);
+  background: #8b5cf6;
+  color: white;
+}
+
+.result {
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.2),
+    rgba(99, 102, 241, 0.08)
+  );
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.result-label {
+  display: flex;
+  justify-content: space-between;
+  color: #a1a1aa;
+  font-size: 13px;
+}
+
+.result-amount {
+  margin-top: 8px;
+  color: white;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.result-currency {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.rate-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.rate-status {
+  color: #34d399;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px 12px;
+  }
+
+  .converter-card {
+    padding: 26px 18px;
+    border-radius: 22px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .converter-box {
+    padding: 18px;
+  }
+
+  .currency-row {
+    grid-template-columns: 1fr;
+  }
+
+  .swap-button {
+    margin: 0 auto;
+  }
+
+  .result-amount {
+    font-size: 30px;
+  }
+
+  .rate-info {
+    flex-direction: column;
+  }
+}
